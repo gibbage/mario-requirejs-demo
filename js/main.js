@@ -1,6 +1,15 @@
 requirejs.config({
     paths: {
         underscore: '../bower_components/underscore/underscore'
+    },
+
+    shim: {
+        // Require will look through your baseDir and paths config looking for
+        // the file 'underscore.js'. Now when one of your modules depends on
+        // 'underscore' it will be aliased to window._
+        'underscore': {
+            exports: '_' // Refers to underscore's global: window._
+        }
     }
 });
 
