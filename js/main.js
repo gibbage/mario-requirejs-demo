@@ -1,5 +1,5 @@
 require(
-    ['app/mario', 'app/block', 'app/scoreboard'],
+    ['mario', 'block', 'scoreboard'],
     function (mario, block, scoreboard) {
 
         mario.punch(block);

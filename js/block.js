@@ -4,7 +4,7 @@ define(function (require) {
 
         hit: function () {
             console.log('<BA-DING!>');
-            var scoreboard = require('app/scoreboard');
+            var scoreboard = require('scoreboard');
             scoreboard.incrementCoinCount();
         }
 
