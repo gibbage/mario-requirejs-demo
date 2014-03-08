@@ -1,0 +1,24 @@
+{
+  "name": "mario-requirejs-demo",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "connect": "~2.14.1",
+    "express": "~3.5.0",
+    "serve-static": "~1.0.2"
+  },
+  "devDependencies": {
+    "express": "~3.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "mario",
+    "requirejs"
+  ],
+  "author": "Shane Gibb <shane.gibb@gmail.com>",
+  "license": "BSD-2-Clause"
+}
