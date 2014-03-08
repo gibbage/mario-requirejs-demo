@@ -1,5 +1,6 @@
 requirejs.config({
     paths: {
+        jquery: 'http://code.jquery.com/jquery-2.1.0.min',
         underscore: '../bower_components/underscore/underscore'
     },
 
@@ -14,18 +15,18 @@ requirejs.config({
 });
 
 require(
-    ['mario', 'block', 'scoreboard', 'underscore'],
-    function (mario, block, scoreboard, _) {
+    ['mario', 'block', 'scoreboard', 'underscore', 'fancy-log'],
+    function (mario, block, scoreboard, _, fancyLog) {
 
         mario.punch(block);
 
-        console.log('Mario has ' + scoreboard.getCoinCount() + ' coins.');
+        fancyLog.log('Mario has ' + scoreboard.getCoinCount() + ' coins.');
 
         _(5).times(function () {
             mario.punch(block);
         });
 
-        console.log('Mario has ' + scoreboard.getCoinCount() + ' coins.');
+        fancyLog.log('Mario has ' + scoreboard.getCoinCount() + ' coins.');
 
     }
 );

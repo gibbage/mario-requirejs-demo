@@ -1,11 +1,13 @@
-define(function () {
+define(['jquery'], function ($) {
 
-    var coinCount = 0;
+    var coinCount = 0,
+        $coinDisplay = $('.coin-count');
 
     return {
 
         incrementCoinCount: function () {
             coinCount++;
+            updateDisplay();
         },
 
         getCoinCount: function () {
@@ -13,5 +15,9 @@ define(function () {
         }
 
     };
+
+    function updateDisplay () {
+        $coinDisplay.text(coinCount);
+    }
 
 });

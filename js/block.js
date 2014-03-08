@@ -3,7 +3,7 @@ define(function (require) {
     return {
 
         hit: function () {
-            console.log('<BA-DING!>');
+            require('fancy-log').log('BA-DING!');
             var scoreboard = require('scoreboard');
             scoreboard.incrementCoinCount();
         }
