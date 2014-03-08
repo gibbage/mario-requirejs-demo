@@ -1,13 +1,20 @@
+requirejs.config({
+    paths: {
+        underscore: '../bower_components/underscore/underscore'
+    }
+});
+
 require(
-    ['mario', 'block', 'scoreboard'],
-    function (mario, block, scoreboard) {
+    ['mario', 'block', 'scoreboard', 'underscore'],
+    function (mario, block, scoreboard, _) {
 
         mario.punch(block);
 
         console.log('Mario has ' + scoreboard.getCoinCount() + ' coins.');
 
-        mario.punch(block);
-        mario.punch(block);
+        _(5).times(function () {
+            mario.punch(block);
+        });
 
         console.log('Mario has ' + scoreboard.getCoinCount() + ' coins.');
 
