@@ -17,12 +17,20 @@ requirejs.config({
         'underscore': {
             exports: '_' // Refers to underscore's global: window._
         }
+    },
+
+    bundles: {
+        'multi-modules': ['bowser', 'yoshi', 'toad']
     }
 });
 
 require(
-    ['mario', 'block', 'scoreboard', 'underscore', 'fancy-log'],
-    function (mario, block, scoreboard, _, fancyLog) {
+    ['mario', 'block', 'scoreboard', 'underscore', 'fancy-log', 'bowser', 'toad'],
+    function (mario, block, scoreboard, _, fancyLog, bowserMsg, toadMsg) {
+
+        fancyLog.log('Mario gets the axe and Bowser fall into the lava');
+        fancyLog.log('Bowser: ' + bowserMsg);
+        fancyLog.log('Toad: ' + toadMsg);
 
         mario.punch(block);
 
