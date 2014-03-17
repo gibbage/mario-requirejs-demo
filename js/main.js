@@ -4,7 +4,10 @@ requirejs.config({
             '//code.jquery.com/jquery-2.1.0.min',
             '../bower_components/jquery/dist/jquery'
         ],
-        underscore: '../bower_components/underscore/underscore'
+        underscore: '../bower_components/underscore/underscore',
+        text: '../bower_components/requirejs-text/text',
+        mustache: '../bower_components/mustache/mustache',
+        html: '../templates'
     },
 
     shim: {
