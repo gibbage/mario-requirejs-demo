@@ -1,6 +1,10 @@
-define(['jquery', 'mustache', 'text!html/event-item.html'], function ($, Mustache, eventItemTemplate) {
+define(['jquery', 'mustache', 'mo', 'text!html/event-item.html'], function ($, Mustache, mo, eventItemTemplate) {
 
     var $eventLog = $('.event-log');
+
+    console.log('Can I get the same module by two names? - YES!');
+    console.log('MUSTACHE', Mustache);
+    console.log('MO', mo);
 
     return {
 

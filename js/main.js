@@ -10,6 +10,12 @@ requirejs.config({
         html: '../templates'
     },
 
+    map: {
+        '*': {
+          'mo': 'mustache'
+        }
+    },
+
     shim: {
         // Require will look through your baseDir and paths config looking for
         // the file 'underscore.js'. Now when one of your modules depends on
